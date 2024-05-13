@@ -1,0 +1,26 @@
+CREATE TABLE sensor_data(
+	sensor_data_id INTEGER NOT NULL PRIMARY KEY,
+	date TEXT NOT NULL,
+	time TEXT NOT NULL,
+	temperature REAL NOT NULL,
+	humidity REAL NOT NULL,
+	battery_temperature REAL NOT NULL,
+	battery_humidity REAL NOT NULL,
+	battery_voltage REAL NOT NULL,
+	battery_current REAL NOT NULL
+);
+
+CREATE TABLE images(
+	image_id INTEGER NOT NULL PRIMARY KEY,
+	date TEXT NOT NULL,
+	time TEXT NOT NULL,
+	file_name TEXT UNIQUE NOT NULL,
+	file_path TEXT UNIQUE NOT NULL,
+	false_trigger INTEGER NOT NULL
+);
+
+CREATE TABLE update_log(
+	log_id INTEGER NOT NULL PRIMARY KEY,
+	date TEXT NOT NULL,
+	time TEXT NOT NULL
+);
